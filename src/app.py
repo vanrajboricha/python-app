@@ -13,7 +13,7 @@ def details():
         "current_time": now.strftime("%H:%M:%S"),
         "timestamp": now.isoformat(),
         'hostname': socket.gethostname(),
-        'message': 'you are doing great, Vanraj!!'
+        'message': 'you are doing great, Vanraj!!!'
     })
 
 @app.route('/api/v1/healthz')
