@@ -3,8 +3,8 @@ from datetime import datetime
 import socket
 app = Flask(__name__)
 
-@app.route('/api/v1/details')
-def details():
+@app.route('/api/v1/info')
+def info():
     #return "<h1>Hello, Flask!</h1>"
     now = datetime.now()
 
@@ -13,7 +13,8 @@ def details():
         "current_time": now.strftime("%H:%M:%S"),
         "timestamp": now.isoformat(),
         'hostname': socket.gethostname(),
-        'message': 'you are doing great, Vanraj!!!'
+        'message': 'you are doing great, Vanraj!!!',
+        'deployed_on': 'kubernetes'
     })
 
 @app.route('/api/v1/healthz')
